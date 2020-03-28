@@ -67,7 +67,7 @@ GlobalDescriptorTable::SegmentDescriptor::SegmentDescriptor(uint32_t base,uint32
     target[2] = base  & 0XFF;
     target[3] = (base >> 8) & 0XFF;
     target[4] = (base >> 16) & 0XFF;
-    target[7] = (base >> 32) & 0XFF;  
+    target[7] = (base >> 24) & 0XFF;  
     target[5] = flags;
 }
 
