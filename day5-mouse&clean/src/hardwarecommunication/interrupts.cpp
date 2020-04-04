@@ -157,11 +157,11 @@ uint32_t InterruptManager::DoHandleInterrupt(uint8_t interruptNumber, uint32_t e
 
     //Send a reply to PIC so that Interruot handling will not stop
 
-    if(0x20<=interruptNumber && interruptNumber < 0x30)
+    if(0x20<=interruptNumber && interruptNumber < (0x20+16))
     {
         //printf("iiii\n");
         programmableInterruptControllerMasterCommandPort.Write(0x20);
-        if(0x28 <= interruptNumber && interruptNumber>=0x30)
+        if((0x20+8) <= interruptNumber)
             programmableInterruptControllerSlaveCommandPort.Write(0x20);
 
 
