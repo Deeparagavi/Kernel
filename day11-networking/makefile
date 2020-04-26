@@ -14,11 +14,11 @@ objects = obj/loader.o \
           obj/hardwarecommunication/interrupts.o \
 		  obj/hardwarecommunication/pci.o \
 		  obj/multitasking.o\
+		  obj/drivers/amd_am79c973.o \
 		  obj/memorymanagement.o\
           obj/drivers/keyboard.o \
           obj/drivers/mouse.o \
 		  obj/drivers/vga.o \
-		  obj/drivers/amd_am79c973.o\
 		  obj/gui/desktop.o\
 		  obj/gui/widget.o\
 		  obj/gui/window.o\

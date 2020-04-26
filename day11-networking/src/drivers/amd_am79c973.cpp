@@ -140,6 +140,7 @@ int amd_am79c973::Reset()
 
 uint32_t amd_am79c973::HandleInterrupt(common::uint32_t esp)
 {
+    printf("handling\n\n\n\n\n");
     registerAddressPort.Write(0);
     uint32_t temp = registerDataPort.Read();
     
@@ -176,6 +177,7 @@ void amd_am79c973::Send(uint8_t* buffer, int size)
     printf("\nSEND: ");
     for(int i = 14+20; i < (size>64?64:size); i++)
     {
+        printf("ddd\n\n");
         printfHex(buffer[i]);
         printf(" ");
     }

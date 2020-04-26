@@ -11,7 +11,6 @@
 .global _ZN4myos21hardwarecommunication16InterruptManager19HandleException\num\()Ev
 _ZN4myos21hardwarecommunication16InterruptManager19HandleException\num\()Ev:
     movb $\num, (interruptnumber)
-    push $0
     jmp int_bottom
 .endm
 
